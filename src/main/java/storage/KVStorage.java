@@ -10,21 +10,11 @@ public interface KVStorage{
     /**
      *  write key into local storage
      **/
-    void put(int partitionID, String key, String value);
+    void put(String key, String value);
 
     /**
      * get value using key and partition ID
      **/
-    String get(int partitionID, String key);
+    String get(String key);
 
-
-    /**
-     * get local meta table. K: partition id,  V: partition location
-     */
-    Map<Integer, String> getMetaLocal();
-
-    /**
-     * set local meta table
-     */
-    void setMetaLocal(Map<Integer, String> newMetaTable);
 }

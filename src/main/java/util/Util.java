@@ -35,6 +35,8 @@ public final class Util {
         return null;
     }
 
+    public static String genDataKey(int partitionID, String key){return Integer.toString(partitionID) + '\t' + key;}
+
     public static String genMetaKey(int partitionID){
         return Integer.toString(partitionID);
     }
