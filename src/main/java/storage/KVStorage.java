@@ -1,10 +1,11 @@
 package storage;
 
-import java.util.Map;
-
 /**
- * coded by mgh
+ *
+ * Created by mgh on 4/12/17.
  */
+
+
 public interface KVStorage{
 
     /**

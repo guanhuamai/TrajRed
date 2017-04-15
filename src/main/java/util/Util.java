@@ -12,6 +12,7 @@ import java.util.Enumeration;
 public final class Util {
 
     private Util(){}
+    public static final String REDIS_DELIMINATOR = ":";
 
     public static String getLocalIP(){
         try {
@@ -34,6 +35,23 @@ public final class Util {
         }
         return null;
     }
+
+    /**
+     *
+     * @param objA object that override toString
+     * @param objB object that override toString
+     * @param deliminator the deliminator lies between objA and objB
+     * @return objA + deliminator + objB
+     */
+    public static String concatWithDelim (Object objA, Object objB, String deliminator){
+        return objA.toString() + deliminator + objB.toString();
+    }
+
+
+
+
+
+
 
     public static String genDataKey(int partitionID, String key){return Integer.toString(partitionID) + '\t' + key;}
 
